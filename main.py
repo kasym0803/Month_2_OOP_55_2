@@ -9,14 +9,22 @@ class Person:
     def introduce(self):
         return f"Привет, меня зовут {self.name}, мой age {self.age}, мой city {self.city}"
 
-person = Person("Касымбек", 18, "Bishkek")
+    def is_abult(self):
+        if self.age >= 18:
+            return f"{self.name} старше 18 лет", True
+        else:
+            return f"{self.name} не страше 18 лет", False
 
-print(person.introduce())
+Kasymbek = Person("Касымбек", 18, "Bishkek")
+Aziz = Person("Азиз", 22, "Bishkek")
+Aidar = Person("Айдар", 17, "Bishkek")
 
-# def is_abult():
-#     if person.age >= 18:
-#         return f"True"
-#     else:
-#         return f"False"
-#     print(is_abult())
+print(Kasymbek.introduce())
+print(Kasymbek.is_abult())
+
+print(Aziz.introduce())
+print(Aziz.is_abult())
+
+print(Aidar.introduce())
+print(Aidar.is_abult())
 
